@@ -1,0 +1,8 @@
+# Hashes of file build rules.
+cc8b46e5b56e1afee5a781d44f270f33 CMakeFiles/uninstall
+516d934226145caf7f94a753cacb7ca0 docs/doxygen/CMakeFiles/doxygen_target
+46755c744e70699d33eaeb4a90ef969a docs/doxygen/xml
+bc8bb6642ffde23d3bd26bdfe719642f python/satellitesPlus/CMakeFiles/copy_module_for_tests
+e9ca05b5f2ca9e68d0d5d4b2a1fa6ec4 python/satellitesPlus/CMakeFiles/pygen_python_satellitesPlus_734482697b84639b3306f89e56b31efe
+51c33bbdc70ec5028f964b65c42e8c07 python/satellitesPlus/__init__.pyc
+2a1600cc3f2a227de6db8fb94338244a python/satellitesPlus/__init__.pyo

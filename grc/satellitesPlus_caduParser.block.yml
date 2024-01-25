@@ -1,0 +1,32 @@
+id: satellitesPlus_caduParser
+label: caduParser
+category: '[satellitesPlus]'
+
+templates:
+  imports: from gnuradio import satellitesPlus
+  make: satellitesPlus.caduParser(${tag_selection})
+
+#  Make one 'parameters' list entry for every parameter you want settable from the GUI.
+#     Keys include:
+#     * id (makes the value accessible as keyname, e.g. in the make entry)
+#     * label (label shown in the GUI)
+#     * dtype (e.g. int, float, complex, byte, short, xxx_vector, ...)
+#     * default
+parameters:
+- id: tag_selection 
+  label: Tag Selection 
+  dtype: raw 
+  options: ['0','1']
+  option_labels: ['ASM' , 'FSW']
+  default: '0' 
+  hide: none
+inputs:
+- label: in
+  domain: message 
+outputs:
+- label: out
+  domain: message 
+
+#  'file_format' specifies the version of the GRC yml format used in the file
+#  and should usually not be changed.
+file_format: 1

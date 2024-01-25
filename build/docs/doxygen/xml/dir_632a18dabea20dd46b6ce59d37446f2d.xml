@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_632a18dabea20dd46b6ce59d37446f2d" kind="dir">
+    <compoundname>satellitesPlus</compoundname>
+    <innerfile refid="api_8h">api.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/antonrejoe/gr-satellitesPlus/include/gnuradio/satellitesPlus/"/>
+  </compounddef>
+</doxygen>

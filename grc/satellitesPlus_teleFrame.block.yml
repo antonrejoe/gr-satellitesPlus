@@ -1,0 +1,150 @@
+id: satellitesPlus_teleFrame 
+label: teleFrame
+category: '[satellitesPlus]'
+
+templates:
+  imports: from gnuradio import satellitesPlus 
+  make: satellitesPlus.teleFrame( ${choice}, ${asm}, ${fsw}, ${transfer_frame_version_number},
+        ${spacecraft_id}, ${virtual_channel_id}, ${ocf_flag}, ${master_channel_frame_count},
+        ${virtual_channel_frame_count} , ${transfer_frame_secondary_header_flag},
+        ${synch_flag} , ${packet_order_flag} , ${segment_length_id} , ${first_header_pointer}
+        , ${secondary_header_versio_no},${secondary_header_length}, ${secondary_header_data},
+        ${spacecraft_application_data},${ocf_data} ,${frame_error_control_field_data},${num_of_octets})
+
+
+parameters:
+- id: choice
+  label: ASM / FSW
+  dtype: raw
+  options: ['0','1']
+  option_labels: ['asm' ,'fsw']
+  hide: None
+
+- id:     asm 
+  label:  ASM 
+  dtype:  raw 
+  default: None
+  hide: None
+  #hide: ${ ( 'none' if choice == 0 else 'all')}
+
+- id: fsw
+  label: FSW 
+  dtype: raw
+  default: None
+  hide: None
+  #hide: ${ ( 'none' if choice == '1' else 'all')}
+
+- id:   transfer_frame_version_number 
+  label: Transfer Frame Version number 
+  dtype: raw 
+  default: '0' 
+  hide: none
+
+- id: spacecraft_id
+  label: Space craft ID
+  dtype: raw
+  default: '0'
+  hide: none
+
+- id: virtual_channel_id
+  label: Virtual Channel ID
+  dtype: raw
+  default: '0'
+  hide: none
+- id: ocf_flag
+  label: OCF Flag
+  dtype: raw
+  options: ['1','0']
+  option_labels: ['Yes','No']
+  hide: none
+- id: master_channel_frame_count
+  label: Master Channel Frame Count
+  dtype: raw
+  default: '0' 
+  hide: none
+- id: virtual_channel_frame_count
+  label: Virtual Channel Frame count
+  dtype: raw
+  default: '0' 
+  hide: none
+- id: transfer_frame_secondary_header_flag
+  label: Transfer Frame Secondary Header Flag
+  dtype: raw
+  options: ['1', '0']
+  option_labels: ['Yes' , 'No']
+  hide: none
+- id: synch_flag
+  label: Synch Flag
+  dtype: raw
+  options: ['1','0']
+  option_labels: ['Yes','No']
+  hide: none
+- id: packet_order_flag
+  label: Packet order Flag
+  dtype: raw
+  options: [ '1' , '0']
+  option_labels: [ 'Yes','No']
+  hide: none
+- id: segment_length_id
+  label: Segment Length ID
+  dtype: raw 
+  default: '0' 
+  hide: none
+- id: first_header_pointer
+  label: First Header Pointer
+  dtype: raw
+  default: '0'
+  hide: none
+- id: secondary_header_versio_no
+  label: Secondary Header Version Number
+  dtype: raw
+  default: '0'
+  hide: none
+
+- id: secondary_header_length 
+  label: Secondary Header Length 
+  dtype: raw 
+  default: '7'
+  hide: none 
+  
+- id: secondary_header_data
+  label: Secondary Header Data
+  dtype: raw 
+  default: '12'
+  hide: none 
+
+- id: spacecraft_application_data
+  label: Space Craft Application Data
+  dtype: raw
+  default: '0'
+  hide: none
+
+- id: ocf_data
+  label: OCF Data
+  dtype: raw
+  default: '34'
+  hide: none
+  
+- id: frame_error_control_field_data  
+  label: Frame Error Control Field Data 
+  dtype: raw
+  default: '11'
+  hide: none
+
+- id:  num_of_octets
+  label: Number of Octets
+  dtype: raw
+  default: '236'
+  hide: none
+  
+inputs:
+- label: in 
+  domain: message 
+
+outputs:
+- label: out 
+  domain: message 
+
+#  'file_format' specifies the version of the GRC yml format used in the file
+#  and should usually not be changed.
+file_format: 1
